@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Theories: Behaviourism vs. Cognitivism</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #3b82f6;
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-bold text-slate-900">Behaviourism vs. Cognitivism</h1>
+                <p class="text-xs sm:text-sm text-slate-500">Interactive Knowledge Check & Review</p>
+            </div>
+            <!-- Progress Summary Pill -->
+            <div id="overall-badge" class="bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                Score: <span id="total-score" class="font-bold text-slate-900">0</span> / 14
+            </div>
+        </div>
+        <!-- Exercise Tabs -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 flex border-t border-slate-100">
+            <button id="tab-1-btn" onclick="switchTab('behaviourism')" class="tab-btn active py-3 px-4 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Exercise 1: Behaviourism
+            </button>
+            <button id="tab-2-btn" onclick="switchTab('cognitivism')" class="tab-btn py-3 px-4 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                Exercise 2: Cognitivism
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-6 flex-grow w-full">
+
+        <!-- Instructions Banner -->
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6 text-sm text-blue-900 flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+                <strong>Instructions:</strong> Fill in the missing words to complete the explanations. You should attempt this on your own first, but feel free to use course notes or resources if necessary. Capitalization does not affect scoring.
+            </div>
+        </div>
+
+        <!-- EXERCISE 1: BEHAVIOURISM -->
+        <section id="section-behaviourism" class="space-y-6">
+            <!-- Concept Visual Diagram -->
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm text-center">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">Core Model: Stimulus-Response (S-R)</h2>
+                <div class="flex justify-center items-center gap-2 sm:gap-6 max-w-lg mx-auto py-2">
+                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-center w-28 sm:w-36">
+                        <span class="block text-xs font-semibold text-amber-600 uppercase">Input</span>
+                        <span class="text-xs sm:text-sm font-medium text-amber-900">Stimulus</span>
+                    </div>
+                    <svg class="w-6 h-6 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <div class="bg-slate-100 border border-slate-300 rounded-lg p-3 text-center w-20 sm:w-28 opacity-75">
+                        <span class="block text-[10px] font-semibold text-slate-500 uppercase">Black Box</span>
+                        <span class="text-xs text-slate-600 italic">(Ignored)</span>
+                    </div>
+                    <svg class="w-6 h-6 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-center w-28 sm:w-36">
+                        <span class="block text-xs font-semibold text-emerald-600 uppercase">Output</span>
+                        <span class="text-xs sm:text-sm font-medium text-emerald-900">Response</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions Form -->
+            <form id="form-behaviourism" onsubmit="event.preventDefault(); evaluateExercise('behaviourism');" class="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-sm space-y-6">
+                <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Part 1: Behaviourism Statements</h2>
+                
+                <div id="questions-behaviourism" class="space-y-4">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors shadow-sm text-sm">
+                        Check Answers (Part 1)
+                    </button>
+                    <button type="button" onclick="resetExercise('behaviourism')" class="text-slate-500 hover:text-slate-700 text-sm font-medium">
+                        Reset Part 1
+                    </button>
+                </div>
+            </form>
+
+            <!-- Feedback Card -->
+            <div id="feedback-behaviourism" class="hidden rounded-xl border p-5 transition-all duration-300"></div>
+        </section>
+
+        <!-- EXERCISE 2: COGNITIVISM -->
+        <section id="section-cognitivism" class="hidden space-y-6">
+            <!-- Concept Visual Diagram -->
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm text-center">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">Core Model: Information Processing & Schemas</h2>
+                <div class="flex justify-center items-center gap-2 sm:gap-4 max-w-xl mx-auto py-2">
+                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-2.5 sm:p-3 text-center w-24 sm:w-32">
+                        <span class="block text-[10px] sm:text-xs font-semibold text-purple-600 uppercase">Input</span>
+                        <span class="text-xs sm:text-sm font-medium text-purple-900">Sensory Input</span>
+                    </div>
+                    <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-2.5 sm:p-3 text-center w-28 sm:w-36">
+                        <span class="block text-[10px] sm:text-xs font-semibold text-indigo-600 uppercase">Mental Process</span>
+                        <span class="text-xs sm:text-sm font-medium text-indigo-900">Schema / Memory</span>
+                    </div>
+                    <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <div class="bg-teal-50 border border-teal-200 rounded-lg p-2.5 sm:p-3 text-center w-24 sm:w-32">
+                        <span class="block text-[10px] sm:text-xs font-semibold text-teal-600 uppercase">Outcome</span>
+                        <span class="text-xs sm:text-sm font-medium text-teal-900">Understanding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions Form -->
+            <form id="form-cognitivism" onsubmit="event.preventDefault(); evaluateExercise('cognitivism');" class="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-sm space-y-6">
+                <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Part 2: Cognitivism Statements</h2>
+                
+                <div id="questions-cognitivism" class="space-y-4">
+                    <!-- Dynamic rendering by JS -->
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors shadow-sm text-sm">
+                        Check Answers (Part 2)
+                    </button>
+                    <button type="button" onclick="resetExercise('cognitivism')" class="text-slate-500 hover:text-slate-700 text-sm font-medium">
+                        Reset Part 2
+                    </button>
+                </div>
+            </form>
+
+            <!-- Feedback Card -->
+            <div id="feedback-cognitivism" class="hidden rounded-xl border p-5 transition-all duration-300"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+        Educational Technology Module | Based on Bates (2022) & Learning Theories Frameworks
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        // Question Data derived directly from uploaded file
+        const exerciseData = {
+            behaviourism: [
+                {
+                    id: "b1",
+                    num: 1,
+                    before: "Behaviourism was initially developed in the",
+                    after: ".",
+                    answers: ["1920s", "1920's", "1920"],
+                    tip: "Decade in the 20th century"
+                },
+                {
+                    id: "b2",
+                    num: 2,
+                    before: "Behaviourism focuses on aspects of behaviour that can be directly",
+                    after: ".",
+                    answers: ["observed and measured", "observable", "measurable"],
+                    tip: "Observable and measurable qualities"
+                },
+                {
+                    id: "b3",
+                    num: 3,
+                    before: "The key idea of behaviourism is human behaviour can be explained through",
+                    after: "associations.",
+                    answers: ["stimulus-response", "stimulus response", "s-r"],
+                    tip: "S-R pattern"
+                },
+                {
+                    id: "b4",
+                    num: 4,
+                    before: "Behaviourism emphasises",
+                    after: "and punishment as drivers of learning, and on pre-defined and measurable outcomes.",
+                    answers: ["reward", "rewards"],
+                    tip: "Positive reinforcement mechanism"
+                },
+                {
+                    id: "b5",
+                    num: 5,
+                    before: "Behaviourism can be useful for rote learning of facts or standard procedures that do not require",
+                    after: "and for dealing with children.",
+                    answers: ["individual judgement", "judgement", "judgment"],
+                    tip: "Personal decision-making skill"
+                },
+                {
+                    id: "b6",
+                    num: 6,
+                    before: "A common criticism against behaviourism is that it ignores the role of cognition, emotions, and",
+                    after: "in behaviour.",
+                    answers: ["free will", "agency", "autonomy"],
+                    tip: "Personal autonomy / self-determination"
+                },
+                {
+                    id: "b7",
+                    num: 7,
+                    before: "Behaviourism remains very",
+                    after: "in education and very popular with parents, politicians, as well as computer scientists interested in automating learning.",
+                    answers: ["influential", "impactful", "dominant", "important", "significant"],
+                    tip: "Having a strong effect"
+                }
+            ],
+            cognitivism: [
+                {
+                    id: "c1",
+                    num: 1,
+                    before: "Cognitivism focuses on identifying",
+                    after: "processes essential for human learning.",
+                    answers: ["mental", "cognitive"],
+                    tip: "Internal brain processes"
+                },
+                {
+                    id: "c2",
+                    num: 2,
+                    before: "An important concept in cognitivism is cognitive load. Cognitive load can be divided into intrinsic,",
+                    after: ", and germane (Sweller, 1988).",
+                    answers: ["extraneous"],
+                    tip: "Unnecessary mental effort caused by poor design"
+                },
+                {
+                    id: "c3",
+                    num: 3,
+                    before: "In the revised Bloom's taxonomy, Anderson and Krathwohl (2001) have added",
+                    after: "as the top level and changed the",
+                    after2: "to emphasise the active nature of thinking and learning.",
+                    isDouble: true,
+                    answers: ["creating", "\"creating\""],
+                    answers2: ["nouns into verbs", "noun to verb", "nouns to verbs"],
+                    tip: "Highest Bloom's level (verb)",
+                    tip2: "Grammatical change in taxonomy"
+                },
+                {
+                    id: "c4",
+                    num: 4,
+                    before: "Cognitivism neglects the",
+                    after: "aspects of learning.",
+                    answers: ["sociocultural", "social"],
+                    tip: "Community & cultural elements"
+                },
+                {
+                    id: "c5",
+                    num: 5,
+                    before: "Some view cognitivism as reductionist, likening the human brain to a",
+                    after: "and",
+                    after2: "complex cognitive processes.",
+                    isDouble: true,
+                    answers: ["computer"],
+                    answers2: ["oversimplifying", "simplifying", "reducing"],
+                    tip: "Digital machine analogy",
+                    tip2: "Making things too simple"
+                },
+                {
+                    id: "c6",
+                    num: 6,
+                    before: "The cognitivist approach emphasises developing",
+                    after: "thinking skills via problem-solving activities and teaching learners",
+                    after2: "strategies such as self-assessment, reflection, and goal setting.",
+                    isDouble: true,
+                    answers: ["higher-order", "higher-level", "high-level", "advanced", "higher order"],
+                    answers2: ["metacognitive", "meta-cognitive"],
+                    tip: "Complex thinking (e.g. analysis, synthesis)",
+                    tip2: "Thinking about one's own thinking"
+                },
+                {
+                    id: "c7",
+                    num: 7,
+                    before: "The cognitivist approach encourages the use of concept maps and graphic organisers in line with the schema theory. A schema is a mental framework that helps individuals make sense of new information by connecting it to",
+                    after: ".",
+                    answers: ["prior knowledge", "prior understandings", "previous knowledge", "previous understandings"],
+                    tip: "Existing mental structures"
+                }
+            ]
+        };
+
+        // State variables
+        let scores = { behaviourism: 0, cognitivism: 0 };
+        let totalItems = { behaviourism: 7, cognitivism: 7 };
+
+        // Render Questions on Load
+        window.onload = function() {
+            renderQuestions('behaviourism');
+            renderQuestions('cognitivism');
+        };
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('section-behaviourism').classList.add('hidden');
+            document.getElementById('section-cognitivism').classList.add('hidden');
+
+            if (tab === 'behaviourism') {
+                document.getElementById('tab-1-btn').classList.add('active');
+                document.getElementById('section-behaviourism').classList.remove('hidden');
+            } else {
+                document.getElementById('tab-2-btn').classList.add('active');
+                document.getElementById('section-cognitivism').classList.remove('hidden');
+            }
+        }
+
+        function renderQuestions(type) {
+            const container = document.getElementById(`questions-${type}`);
+            container.innerHTML = '';
+
+            exerciseData[type].forEach(q => {
+                const card = document.createElement('div');
+                card.className = "p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2 text-sm leading-relaxed";
+
+                if (!q.isDouble) {
+                    card.innerHTML = `
+                        <div>
+                            <span class="font-semibold text-slate-700 mr-1">${q.num}.</span>
+                            <span>${q.before}</span>
+                            <input type="text" id="input-${q.id}" class="mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-44 sm:w-56" placeholder="type answer..." title="Hint: ${q.tip}">
+                            <span>${q.after}</span>
+                        </div>
+                        <div id="status-${q.id}" class="text-xs font-medium hidden mt-1"></div>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <div>
+                            <span class="font-semibold text-slate-700 mr-1">${q.num}.</span>
+                            <span>${q.before}</span>
+                            <input type="text" id="input-${q.id}-1" class="mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-36 sm:w-44" placeholder="type answer..." title="Hint: ${q.tip}">
+                            <span>${q.after}</span>
+                            <input type="text" id="input-${q.id}-2" class="mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-44 sm:w-52" placeholder="type answer..." title="Hint: ${q.tip2}">
+                            <span>${q.after2}</span>
+                        </div>
+                        <div id="status-${q.id}" class="text-xs font-medium hidden mt-1"></div>
+                    `;
+                }
+                container.appendChild(card);
+            });
+        }
+
+        function sanitize(str) {
+            return str.trim().toLowerCase().replace(/['"']/g, '');
+        }
+
+        function evaluateExercise(type) {
+            let currentScore = 0;
+            const data = exerciseData[type];
+
+            data.forEach(q => {
+                const statusDiv = document.getElementById(`status-${q.id}`);
+                statusDiv.classList.remove('hidden', 'text-emerald-600', 'text-amber-600', 'text-red-600');
+
+                if (!q.isDouble) {
+                    const input = document.getElementById(`input-${q.id}`);
+                    const userVal = sanitize(input.value);
+                    const isCorrect = q.answers.some(ans => sanitize(ans) === userVal);
+
+                    if (isCorrect) {
+                        currentScore += 1;
+                        input.className = input.className.replace(/border-\S+/, 'border-emerald-500 bg-emerald-50');
+                        statusDiv.classList.add('text-emerald-600');
+                        statusDiv.innerHTML = `✓ Correct!`;
+                    } else {
+                        input.className = input.className.replace(/border-\S+/, 'border-red-400 bg-red-50');
+                        statusDiv.classList.add('text-red-600');
+                        statusDiv.innerHTML = `✗ Expected: <strong>${q.answers.join(' / ')}</strong>`;
+                    }
+                } else {
+                    const input1 = document.getElementById(`input-${q.id}-1`);
+                    const input2 = document.getElementById(`input-${q.id}-2`);
+                    const userVal1 = sanitize(input1.value);
+                    const userVal2 = sanitize(input2.value);
+
+                    const isCorrect1 = q.answers.some(ans => sanitize(ans) === userVal1);
+                    const isCorrect2 = q.answers2.some(ans => sanitize(ans) === userVal2);
+
+                    if (isCorrect1 && isCorrect2) {
+                        currentScore += 1;
+                        input1.className = input1.className.replace(/border-\S+/, 'border-emerald-500 bg-emerald-50');
+                        input2.className = input2.className.replace(/border-\S+/, 'border-emerald-500 bg-emerald-50');
+                        statusDiv.classList.add('text-emerald-600');
+                        statusDiv.innerHTML = `✓ Correct!`;
+                    } else {
+                        input1.className = input1.className.replace(/border-\S+/, isCorrect1 ? 'border-emerald-500 bg-emerald-50' : 'border-red-400 bg-red-50');
+                        input2.className = input2.className.replace(/border-\S+/, isCorrect2 ? 'border-emerald-500 bg-emerald-50' : 'border-red-400 bg-red-50');
+                        statusDiv.classList.add('text-red-600');
+                        statusDiv.innerHTML = `✗ Answers: [1] <strong>${q.answers.join('/')}</strong> | [2] <strong>${q.answers2.join('/')}</strong>`;
+                    }
+                }
+            });
+
+            scores[type] = currentScore;
+            updateOverallBadge();
+            showFeedback(type, currentScore, data.length);
+        }
+
+        function updateOverallBadge() {
+            const grandTotal = scores.behaviourism + scores.cognitivism;
+            document.getElementById('total-score').textContent = grandTotal;
+        }
+
+        function showFeedback(type, score, total) {
+            const feedbackDiv = document.getElementById(`feedback-${type}`);
+            feedbackDiv.classList.remove('hidden', 'bg-red-50', 'border-red-200', 'bg-amber-50', 'border-amber-200', 'bg-blue-50', 'border-blue-200', 'bg-emerald-50', 'border-emerald-200');
+
+            const percentage = Math.round((score / total) * 100);
+            let feedbackText = "";
+            let colorClasses = "";
+
+            // Custom Range Feedback matching PDF specification
+            if (percentage <= 20) {
+                feedbackText = "It's a good start, but do read more about these theories in Bates (2022).";
+                colorClasses = "bg-red-50 border-red-200 text-red-900";
+            } else if (percentage <= 50) {
+                feedbackText = "Not bad, but do read more about these theories in Bates (2022).";
+                colorClasses = "bg-amber-50 border-amber-200 text-amber-900";
+            } else if (percentage <= 80) {
+                feedbackText = "Good job! Please refer to Bates (2022) and review the lecture slides to consolidate your understanding.";
+                colorClasses = "bg-blue-50 border-blue-200 text-blue-900";
+            } else {
+                feedbackText = "Excellent! Feel free to read Bates (2022) and review the lecture slides for further enrichment.";
+                colorClasses = "bg-emerald-50 border-emerald-200 text-emerald-900";
+            }
+
+            feedbackDiv.className = `rounded-xl border p-5 transition-all duration-300 ${colorClasses}`;
+            feedbackDiv.innerHTML = `
+                <div class="flex items-start gap-3">
+                    <div class="font-bold text-lg">${percentage}%</div>
+                    <div>
+                        <h3 class="font-semibold text-sm">Score: ${score} / ${total}</h3>
+                        <p class="text-xs sm:text-sm mt-0.5">${feedbackText}</p>
+                    </div>
+                </div>
+            `;
+            feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function resetExercise(type) {
+            const form = document.getElementById(`form-${type}`);
+            form.reset();
+
+            exerciseData[type].forEach(q => {
+                const statusDiv = document.getElementById(`status-${q.id}`);
+                statusDiv.classList.add('hidden');
+
+                if (!q.isDouble) {
+                    const input = document.getElementById(`input-${q.id}`);
+                    input.className = "mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-44 sm:w-56";
+                } else {
+                    const input1 = document.getElementById(`input-${q.id}-1`);
+                    const input2 = document.getElementById(`input-${q.id}-2`);
+                    input1.className = "mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-36 sm:w-44";
+                    input2.className = "mx-1 px-3 py-1.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-44 sm:w-52";
+                }
+            });
+
+            document.getElementById(`feedback-${type}`).classList.add('hidden');
+            scores[type] = 0;
+            updateOverallBadge();
+        }
+    </script>
+</body>
+</html>
